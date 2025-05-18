@@ -1,1 +1,5 @@
 Use openwebUI or similar in conjution with ai to probe clients to help produce the docs we need to create websites with cline. 
+
+This could also be used to track bugs and get feedback from the client. We could build a chantbot style component that lives in the code base and its either attached to a admin account (if the project has auth) or just shows on the dev/staging site. Maybe an .env variable to toggle the chatbot 
+
+How we strore this could just be in the .md docs for improvments or bugs etc. Most of my prokjects moving forward might use supabase. Maybe we can have 2 supabase connections, one for the project and the other to an admin style client managment dashboard. My ai memeory workflows currenly live at project level in vscode/git so these cleint feedback docs might live in the project structrue 
