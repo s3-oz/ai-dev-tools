@@ -1,0 +1,171 @@
+# Technical Context: [Project Name]
+
+## Technology Stack
+
+### Frontend
+- **Framework/Library**: [e.g., "React 18.2.0"]
+- **State Management**: [e.g., "Redux 4.2.1"]
+- **UI Components**: [e.g., "Material UI 5.11.0"]
+- **Styling**: [e.g., "Tailwind CSS 3.2.4"]
+- **Build Tools**: [e.g., "Vite 4.0.0"]
+- **Testing**: [e.g., "Jest 29.3.1, React Testing Library 13.4.0"]
+
+### Backend
+- **Framework**: [e.g., "Express 4.18.2"]
+- **Runtime**: [e.g., "Node.js 18.12.1"]
+- **API Style**: [e.g., "REST", "GraphQL"]
+- **Authentication**: [e.g., "JWT, OAuth 2.0"]
+- **Testing**: [e.g., "Mocha 10.2.0, Chai 4.3.7"]
+
+### Database
+- **Primary Database**: [e.g., "PostgreSQL 15.1"]
+- **ORM/Query Builder**: [e.g., "Prisma 4.8.0"]
+- **Migrations**: [e.g., "Prisma Migrate"]
+- **Caching**: [e.g., "Redis 7.0.5"]
+
+### Infrastructure
+- **Hosting**: [e.g., "AWS EC2, Vercel"]
+- **CI/CD**: [e.g., "GitHub Actions"]
+- **Containerization**: [e.g., "Docker 20.10.21, Docker Compose 2.14.0"]
+- **Orchestration**: [e.g., "Kubernetes 1.26.0"]
+- **Monitoring**: [e.g., "Prometheus, Grafana"]
+- **Logging**: [e.g., "ELK Stack"]
+
+## Development Environment
+
+### Local Setup
+- **Required Software**: [List of software needed for local development]
+- **Environment Variables**: [List of required environment variables]
+- **Setup Steps**: [Steps to set up the local development environment]
+- **Local Development Commands**: [Common commands for local development]
+
+### IDE Configuration
+- **Recommended IDE**: [e.g., "VS Code"]
+- **Extensions**: [List of recommended extensions]
+- **Settings**: [Recommended settings]
+- **Debugging Setup**: [How to set up debugging]
+
+### Version Control
+- **System**: [e.g., "Git"]
+- **Repository**: [Repository URL]
+- **Branching Strategy**: [e.g., "GitFlow, GitHub Flow"]
+- **Commit Conventions**: [e.g., "Conventional Commits"]
+- **Code Review Process**: [Description of the code review process]
+
+## Technical Constraints
+
+### Performance Requirements
+- [Requirement 1: e.g., "Page load time < 2s"]
+- [Requirement 2: e.g., "API response time < 200ms"]
+- [Additional requirements...]
+
+### Security Requirements
+- [Requirement 1: e.g., "All API endpoints must be authenticated"]
+- [Requirement 2: e.g., "User data must be encrypted at rest"]
+- [Additional requirements...]
+
+### Scalability Requirements
+- [Requirement 1: e.g., "System must handle 1000 concurrent users"]
+- [Requirement 2: e.g., "Database must scale horizontally"]
+- [Additional requirements...]
+
+### Compatibility Requirements
+- [Requirement 1: e.g., "Must support latest 2 versions of major browsers"]
+- [Requirement 2: e.g., "Mobile-responsive design required"]
+- [Additional requirements...]
+
+### Regulatory Requirements
+- [Requirement 1: e.g., "GDPR compliance required"]
+- [Requirement 2: e.g., "WCAG 2.1 AA compliance required"]
+- [Additional requirements...]
+
+## Dependencies
+
+### Frontend Dependencies
+- [Dependency 1]: [Version] - [Purpose]
+- [Dependency 2]: [Version] - [Purpose]
+- [Additional dependencies...]
+
+### Backend Dependencies
+- [Dependency 1]: [Version] - [Purpose]
+- [Dependency 2]: [Version] - [Purpose]
+- [Additional dependencies...]
+
+### Development Dependencies
+- [Dependency 1]: [Version] - [Purpose]
+- [Dependency 2]: [Version] - [Purpose]
+- [Additional dependencies...]
+
+### External Services
+- [Service 1]: [Purpose, API version]
+- [Service 2]: [Purpose, API version]
+- [Additional services...]
+
+## Tools
+
+### Development Tools
+- [Tool 1]: [Purpose, usage]
+- [Tool 2]: [Purpose, usage]
+- [Additional tools...]
+
+### Testing Tools
+- [Tool 1]: [Purpose, usage]
+- [Tool 2]: [Purpose, usage]
+- [Additional tools...]
+
+### Deployment Tools
+- [Tool 1]: [Purpose, usage]
+- [Tool 2]: [Purpose, usage]
+- [Additional tools...]
+
+### Monitoring Tools
+- [Tool 1]: [Purpose, usage]
+- [Tool 2]: [Purpose, usage]
+- [Additional tools...]
+
+## API Documentation
+
+### Internal APIs
+- [API 1]: [Description, endpoint, parameters, response]
+- [API 2]: [Description, endpoint, parameters, response]
+- [Additional APIs...]
+
+### External APIs
+- [API 1]: [Description, documentation URL, usage]
+- [API 2]: [Description, documentation URL, usage]
+- [Additional APIs...]
+
+## Database Schema
+
+### [Table/Collection 1]
+- [Field 1]: [Type, constraints, description]
+- [Field 2]: [Type, constraints, description]
+- [Additional fields...]
+- **Relationships**: [Description of relationships with other tables]
+- **Indexes**: [List of indexes]
+
+### [Table/Collection 2]
+- [Field 1]: [Type, constraints, description]
+- [Field 2]: [Type, constraints, description]
+- [Additional fields...]
+- **Relationships**: [Description of relationships with other tables]
+- **Indexes**: [List of indexes]
+
+### [Additional Tables/Collections...]
+
+## Environment Configuration
+
+### Development Environment
+- **URL**: [Development URL]
+- **Environment Variables**: [List of environment variables]
+- **Access**: [How to access the development environment]
+
+### Staging Environment
+- **URL**: [Staging URL]
+- **Environment Variables**: [List of environment variables]
+- **Access**: [How to access the staging environment]
+
+### Production Environment
+- **URL**: [Production URL]
+- **Environment Variables**: [List of environment variables]
+- **Access**: [How to access the production environment]

@@ -1,0 +1,254 @@
+# Progress: [Project Name]
+
+*Last Updated: [Date]*
+
+## Project Status Summary
+
+**Current Phase**: [e.g., "Planning", "Development", "Testing", "Deployment", "Maintenance"]  
+**Overall Progress**: [e.g., "25% complete"]  
+**Current Sprint**: [e.g., "Sprint 3 (May 1-14)"]  
+**Project Health**: [e.g., "On track", "At risk", "Delayed"]  
+
+## Completed Features
+
+### [Feature 1: e.g., "User Authentication"]
+- **Completion Date**: [When the feature was completed]
+- **Version**: [Version number where this feature was introduced]
+- **Description**: [Detailed description of the feature]
+- **Key Components**:
+  - [Component 1: e.g., "Login form"]
+  - [Component 2: e.g., "JWT authentication"]
+  - [Additional components...]
+- **Testing Status**: [Has this been tested? What tests were run?]
+- **Documentation**: [Link to documentation]
+- **Notes**: [Any additional notes or considerations]
+
+### [Feature 2: e.g., "Product Catalog"]
+- **Completion Date**: [When the feature was completed]
+- **Version**: [Version number where this feature was introduced]
+- **Description**: [Detailed description of the feature]
+- **Key Components**:
+  - [Component 1]
+  - [Component 2]
+  - [Additional components...]
+- **Testing Status**: [Has this been tested? What tests were run?]
+- **Documentation**: [Link to documentation]
+- **Notes**: [Any additional notes or considerations]
+
+### [Additional completed features...]
+
+## In Progress
+
+### [Feature 1: e.g., "Shopping Cart"]
+- **Status**: [e.g., "70% complete"]
+- **Target Completion**: [Expected completion date]
+- **Description**: [Detailed description of the feature]
+- **Key Components**:
+  - [Component 1]: [Status]
+  - [Component 2]: [Status]
+  - [Additional components...]
+- **Blockers**: [Any blockers preventing progress]
+- **Next Steps**: [What needs to be done next]
+
+### [Feature 2: e.g., "Payment Processing"]
+- **Status**: [e.g., "30% complete"]
+- **Target Completion**: [Expected completion date]
+- **Description**: [Detailed description of the feature]
+- **Key Components**:
+  - [Component 1]: [Status]
+  - [Component 2]: [Status]
+  - [Additional components...]
+- **Blockers**: [Any blockers preventing progress]
+- **Next Steps**: [What needs to be done next]
+
+### [Additional in-progress features...]
+
+## Planned
+
+### [Feature 1: e.g., "User Reviews"]
+- **Priority**: [e.g., "High", "Medium", "Low"]
+- **Target Start Date**: [When work is expected to begin]
+- **Target Completion**: [Expected completion date]
+- **Description**: [Detailed description of the feature]
+- **Dependencies**: [Any dependencies that must be completed first]
+- **Assigned To**: [Who will work on this feature]
+
+### [Feature 2: e.g., "Recommendation Engine"]
+- **Priority**: [e.g., "High", "Medium", "Low"]
+- **Target Start Date**: [When work is expected to begin]
+- **Target Completion**: [Expected completion date]
+- **Description**: [Detailed description of the feature]
+- **Dependencies**: [Any dependencies that must be completed first]
+- **Assigned To**: [Who will work on this feature]
+
+### [Additional planned features...]
+
+## Known Issues
+
+### [Issue 1: e.g., "Login fails on Safari"]
+- **Severity**: [e.g., "Critical", "High", "Medium", "Low"]
+- **Reported Date**: [When the issue was reported]
+- **Status**: [e.g., "Open", "In Progress", "Fixed", "Verified"]
+- **Description**: [Detailed description of the issue]
+- **Steps to Reproduce**: [How to reproduce the issue]
+- **Assigned To**: [Who is working on this issue]
+- **Fix Version**: [Version where this issue is expected to be fixed]
+- **Workaround**: [Any workaround for the issue]
+
+### [Issue 2: e.g., "Performance degradation with large datasets"]
+- **Severity**: [e.g., "Critical", "High", "Medium", "Low"]
+- **Reported Date**: [When the issue was reported]
+- **Status**: [e.g., "Open", "In Progress", "Fixed", "Verified"]
+- **Description**: [Detailed description of the issue]
+- **Steps to Reproduce**: [How to reproduce the issue]
+- **Assigned To**: [Who is working on this issue]
+- **Fix Version**: [Version where this issue is expected to be fixed]
+- **Workaround**: [Any workaround for the issue]
+
+### [Additional issues...]
+
+## Decision History
+
+### [Decision 1: e.g., "Adopt React as frontend framework"]
+- **Date**: [When the decision was made]
+- **Decision**: [What was decided]
+- **Context**: [What led to this decision]
+- **Alternatives Considered**: [What alternatives were considered]
+- **Rationale**: [Why this decision was made]
+- **Implications**: [What are the implications of this decision]
+- **Status**: [e.g., "Implemented", "Reversed", "Superseded"]
+
+### [Decision 2: e.g., "Use PostgreSQL for database"]
+- **Date**: [When the decision was made]
+- **Decision**: [What was decided]
+- **Context**: [What led to this decision]
+- **Alternatives Considered**: [What alternatives were considered]
+- **Rationale**: [Why this decision was made]
+- **Implications**: [What are the implications of this decision]
+- **Status**: [e.g., "Implemented", "Reversed", "Superseded"]
+
+### [Additional decisions...]
+
+## Milestones
+
+### [Milestone 1: e.g., "MVP Release"]
+- **Target Date**: [When the milestone is expected to be reached]
+- **Status**: [e.g., "Completed", "On Track", "At Risk", "Delayed"]
+- **Description**: [Detailed description of the milestone]
+- **Key Deliverables**:
+  - [Deliverable 1]: [Status]
+  - [Deliverable 2]: [Status]
+  - [Additional deliverables...]
+- **Dependencies**: [Any dependencies for this milestone]
+- **Notes**: [Any additional notes or considerations]
+
+### [Milestone 2: e.g., "Beta Release"]
+- **Target Date**: [When the milestone is expected to be reached]
+- **Status**: [e.g., "Completed", "On Track", "At Risk", "Delayed"]
+- **Description**: [Detailed description of the milestone]
+- **Key Deliverables**:
+  - [Deliverable 1]: [Status]
+  - [Deliverable 2]: [Status]
+  - [Additional deliverables...]
+- **Dependencies**: [Any dependencies for this milestone]
+- **Notes**: [Any additional notes or considerations]
+
+### [Additional milestones...]
+
+## Performance Metrics
+
+### [Metric 1: e.g., "Page Load Time"]
+- **Current Value**: [Current measurement]
+- **Target Value**: [Target measurement]
+- **Trend**: [e.g., "Improving", "Stable", "Degrading"]
+- **Notes**: [Any additional notes or considerations]
+
+### [Metric 2: e.g., "Conversion Rate"]
+- **Current Value**: [Current measurement]
+- **Target Value**: [Target measurement]
+- **Trend**: [e.g., "Improving", "Stable", "Degrading"]
+- **Notes**: [Any additional notes or considerations]
+
+### [Additional metrics...]
+
+## Deployment History
+
+### [Deployment 1: e.g., "v1.0.0 to Production"]
+- **Date**: [When the deployment occurred]
+- **Version**: [Version number]
+- **Environment**: [e.g., "Production", "Staging", "Development"]
+- **Status**: [e.g., "Successful", "Rolled Back", "Partial"]
+- **Key Changes**:
+  - [Change 1]
+  - [Change 2]
+  - [Additional changes...]
+- **Issues**: [Any issues encountered during deployment]
+- **Rollback Plan**: [How to roll back if necessary]
+
+### [Deployment 2: e.g., "v1.1.0 to Staging"]
+- **Date**: [When the deployment occurred]
+- **Version**: [Version number]
+- **Environment**: [e.g., "Production", "Staging", "Development"]
+- **Status**: [e.g., "Successful", "Rolled Back", "Partial"]
+- **Key Changes**:
+  - [Change 1]
+  - [Change 2]
+  - [Additional changes...]
+- **Issues**: [Any issues encountered during deployment]
+- **Rollback Plan**: [How to roll back if necessary]
+
+### [Additional deployments...]
+
+## Team Velocity
+
+### [Sprint 1]
+- **Points Committed**: [Number of story points committed]
+- **Points Completed**: [Number of story points completed]
+- **Completion Rate**: [Percentage of committed points completed]
+- **Key Achievements**: [Major accomplishments during the sprint]
+- **Challenges**: [Challenges encountered during the sprint]
+- **Action Items**: [Actions to improve in the next sprint]
+
+### [Sprint 2]
+- **Points Committed**: [Number of story points committed]
+- **Points Completed**: [Number of story points completed]
+- **Completion Rate**: [Percentage of committed points completed]
+- **Key Achievements**: [Major accomplishments during the sprint]
+- **Challenges**: [Challenges encountered during the sprint]
+- **Action Items**: [Actions to improve in the next sprint]
+
+### [Additional sprints...]
+
+## Retrospective Notes
+
+### [Retrospective 1: e.g., "Sprint 1 Retrospective"]
+- **Date**: [When the retrospective occurred]
+- **What Went Well**:
+  - [Item 1]
+  - [Item 2]
+  - [Additional items...]
+- **What Could Be Improved**:
+  - [Item 1]
+  - [Item 2]
+  - [Additional items...]
+- **Action Items**:
+  - [Action 1]
+  - [Action 2]
+  - [Additional actions...]
+
+### [Retrospective 2: e.g., "Sprint 2 Retrospective"]
+- **Date**: [When the retrospective occurred]
+- **What Went Well**:
+  - [Item 1]
+  - [Item 2]
+  - [Additional items...]
+- **What Could Be Improved**:
+  - [Item 1]
+  - [Item 2]
+  - [Additional items...]
+- **Action Items**:
+  - [Action 1]
+  - [Action 2]
+  - [Additional actions...]
+
+### [Additional retrospectives...]

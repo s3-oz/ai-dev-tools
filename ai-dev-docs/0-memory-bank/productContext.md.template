@@ -1,0 +1,69 @@
+# Product Context: [Project Name]
+
+## Problem Statement
+[Detailed description of the problem(s) this project solves. What pain points does it address? What needs does it fulfill?]
+
+## User Experience Goals
+- [UX goal 1: e.g., "Intuitive navigation that requires minimal learning"]
+- [UX goal 2: e.g., "Fast performance with response times under 200ms"]
+- [UX goal 3: e.g., "Accessible design that meets WCAG 2.1 AA standards"]
+- [Additional UX goals...]
+
+## User Journeys
+
+### [Primary User Journey Name]
+1. [Step 1: e.g., "User lands on homepage"]
+2. [Step 2: e.g., "User browses available products"]
+3. [Step 3: e.g., "User selects a product"]
+4. [Additional steps...]
+5. [Outcome: e.g., "User completes purchase"]
+
+### [Secondary User Journey Name]
+1. [Step 1]
+2. [Step 2]
+3. [Additional steps...]
+4. [Outcome]
+
+## Key Features
+
+### [Feature Category 1]
+- [Feature 1.1]: [Purpose and value proposition]
+- [Feature 1.2]: [Purpose and value proposition]
+- [Additional features...]
+
+### [Feature Category 2]
+- [Feature 2.1]: [Purpose and value proposition]
+- [Feature 2.2]: [Purpose and value proposition]
+- [Additional features...]
+
+## User Personas
+
+### [Primary Persona Name]
+- **Demographics**: [Age, occupation, technical proficiency, etc.]
+- **Goals**: [What they want to achieve]
+- **Pain Points**: [Current frustrations they experience]
+- **Motivations**: [Why they would use this product]
+- **Scenarios**: [Common situations where they would use the product]
+
+### [Secondary Persona Name]
+- **Demographics**: [Age, occupation, technical proficiency, etc.]
+- **Goals**: [What they want to achieve]
+- **Pain Points**: [Current frustrations they experience]
+- **Motivations**: [Why they would use this product]
+- **Scenarios**: [Common situations where they would use the product]
+
+## Market Context
+- **Competitors**: [List of main competitors and their strengths/weaknesses]
+- **Market Trends**: [Relevant trends affecting the product]
+- **Differentiators**: [What makes this product unique]
+
+## Success Metrics
+- [Metric 1: e.g., "User acquisition rate"] - [Target: e.g., "Increase by 20% in 6 months"]
+- [Metric 2: e.g., "Conversion rate"] - [Target: e.g., "Improve to 3.5%"]
+- [Metric 3: e.g., "User retention"] - [Target: e.g., "70% monthly active users"]
+- [Additional metrics...]
+
+## Future Roadmap
+- [Short-term goal: 1-3 months]
+- [Medium-term goal: 3-6 months]
+- [Long-term goal: 6+ months]
