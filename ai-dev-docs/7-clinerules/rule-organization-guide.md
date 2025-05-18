@@ -15,11 +15,12 @@ This guide explains how to organize and manage both global and workspace-specifi
 Cline uses two types of rules:
 
 1. **Global Rules**: Apply across all projects
-   - Located in: `/Users/oz/Sites/ai-dev-tools/.clinerules/`
+   - Located in: `/Users/oz/Documents/Cline/Rules/`
    - Contain universal standards, patterns, and workflows
+   - Can be toggled on/off for any project
 
 2. **Workspace Rules**: Apply to a specific project only
-   - Located in: `/Users/oz/Sites/ai-dev-tools/ai-dev-docs/7-clinerules/`
+   - Located in: `/Users/oz/Sites/ai-dev-tools/.clinerules/`
    - Contain project-specific guidelines and requirements
 
 ## When to Use Each Type
@@ -47,7 +48,7 @@ Cline uses two types of rules:
 ### Global Rules Structure
 
 ```
-.clinerules/
+/Users/oz/Documents/Cline/Rules/
 ├── memory-bank.md                 # Memory Bank system documentation
 ├── coding-standards.md            # General coding standards
 ├── react-patterns.md              # React best practices
@@ -55,16 +56,31 @@ Cline uses two types of rules:
 └── ...
 ```
 
+In this project, we use a symbolic link to access these global rules:
+
+```
+/Users/oz/Sites/ai-dev-tools/global-rules/ -> /Users/oz/Documents/Cline/Rules/
+```
+
 ### Workspace Rules Structure
 
 ```
-ai-dev-docs/7-clinerules/
-├── README.md                      # Overview of project-specific rules
-├── project-specific-rules.md      # Core project guidelines
-├── component-structure.md         # Project component architecture
-├── api-integration.md             # How this project integrates with APIs
-├── state-management.md            # State management approach for this project
+/Users/oz/Sites/ai-dev-tools/.clinerules/
+├── next-js-supabase-stripe.md     # Project-specific Next.js, Supabase, and Stripe integration
+├── cline-for-webdev-ui.md         # Web design guidelines for this project
 └── ...
+```
+
+### Project-Specific Documentation
+
+```
+/Users/oz/Sites/ai-dev-tools/ai-dev-docs/7-clinerules/
+├── README.md                      # Overview of the rules system
+├── project-specific-rules.md      # Core project guidelines
+├── rule-organization-guide.md     # This guide
+├── continuous-improvement-rules.md # How to improve rules over time
+├── knowledge-gap-rules.md         # Handling knowledge gaps
+└── workflow-rules.md              # Project workflow guidelines
 ```
 
 ## Rule Precedence
@@ -86,10 +102,10 @@ In your workspace rules, explicitly reference relevant global rules:
 
 This project follows these global rules with the following project-specific adaptations:
 
-- [Coding Standards](../../../.clinerules/coding-standards.md)
-- [React Patterns](../../../.clinerules/react-patterns.md)
-- [Next.js Patterns](../../../.clinerules/nextjs-patterns.md)
-- [Git Workflow](../../../.clinerules/git-workflow.md)
+- [Coding Standards](../global-rules/coding-standards.md)
+- [React Patterns](../global-rules/react-patterns.md)
+- [Next.js Patterns](../global-rules/nextjs-patterns.md)
+- [Git Workflow](../global-rules/git-workflow.md)
 ```
 
 ### 2. Specify Exceptions in Workspace Rules

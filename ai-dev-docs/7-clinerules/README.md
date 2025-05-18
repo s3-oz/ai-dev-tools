@@ -10,27 +10,26 @@ Cline Rules are structured guidelines that help maintain consistency, quality, a
 
 Cline Rules are stored in two primary locations:
 
-1. **User-Level Global Rules**: 
+1. **Global Rules**: 
    - Located in: `/Users/oz/Documents/Cline/Rules/`
    - Apply to all projects across your system
-   - Include fundamental rules like `memory-bank.md` and `git-workflow.md`
+   - Include fundamental rules like `memory-bank.md`, `coding-standards.md`, and `git-workflow.md`
+   - Can be toggled on/off for any project
 
-2. **Project-Level Global Rules**:
+2. **Workspace-Specific Rules**:
    - Located in: `/Users/oz/Sites/ai-dev-tools/.clinerules/`
-   - Apply to all parts of the current project
-   - Include:
-     - `memory-bank.md` - Memory Bank system documentation
-     - `coding-standards.md` - General coding standards
-     - `react-patterns.md` - React best practices
-     - `nextjs-patterns.md` - Next.js best practices
-     - `git-workflow.md` - Git branching and commit standards
+   - Apply only to the current project/workspace
+   - Contain project-specific guidelines and requirements
+
+In this project, we use a symbolic link (`global-rules/`) that points to the global rules directory, making it easier to reference global rules from within the project.
 
 ## Rule Hierarchy
 
-When both user-level and project-level rules exist:
+When both global and workspace-specific rules exist:
 
-1. Project-level rules take precedence when they explicitly override user-level rules
-2. User-level rules provide the foundation that project-level rules build upon
+1. Workspace-specific rules take precedence when they explicitly override global rules
+2. Global rules provide the foundation that workspace-specific rules build upon
+3. Global rules can be toggled on/off for specific projects as needed
 
 ## Using Cline Rules
 

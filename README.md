@@ -15,12 +15,15 @@ This repository contains documentation, templates, and resources for AI-assisted
   - **7-clinerules/**: Documentation about the Cline Rules system
   - **8-project-transitions/**: Project transition guides
 
-- **.clinerules/**: Global rules for this project
+- **global-rules/**: Symlink to global rules (stored in `/Users/oz/Documents/Cline/Rules/`)
   - **memory-bank.md**: Memory Bank system documentation
   - **coding-standards.md**: General coding standards
   - **react-patterns.md**: React best practices
-  - **nextjs-patterns.md**: Next.js best practices
   - **git-workflow.md**: Git branching and commit standards
+
+- **.clinerules/**: Workspace-specific rules for this project
+  - **next-js-supabase-stripe.md**: Next.js, Supabase, and Stripe integration
+  - **cline-for-webdev-ui.md**: Web design guidelines for this project
 
 - **ideas/**: Ideas and concepts for future development
 - **MCP/**: Model Context Protocol resources
@@ -32,8 +35,9 @@ This repository contains documentation, templates, and resources for AI-assisted
 
 1. Clone this repository
 2. Explore the documentation in the `ai-dev-docs` directory
-3. Review the global rules in the `.clinerules` directory
-4. Check out the templates in the `ai-dev-docs/0-memory-bank` directory
+3. Review the global rules in the `global-rules` directory
+4. Review the workspace-specific rules in the `.clinerules` directory
+5. Check out the templates in the `ai-dev-docs/0-memory-bank` directory
 
 ## Contributing
 
