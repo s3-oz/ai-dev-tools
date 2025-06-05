@@ -1,8 +1,17 @@
 {
-  "enableAllProjectMcpServers": false,
   "permissions": {
     "allow": [
-      "Bash(gh auth:*)"
+      "Bash(gh auth:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "mcp__context7__*",
+      "mcp__puppeteer__*",
+      "Bash(npm install:*)",
+      "Bash(claude mcp add ntfy ntfy-mcp-server)",
+      "mcp__slack__slack_list_channels",
+      "mcp__slack__slack_get_channel_history",
+      "mcp__slack__slack_post_message",
+      "Bash(mkdir:*)"
     ]
-  }
+  },
+  "enableAllProjectMcpServers": true
 }

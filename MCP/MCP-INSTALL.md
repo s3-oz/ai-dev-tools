@@ -1,24 +1,33 @@
 # MCP Server Installation and Configuration Guide
 
-*Date: 3rd June 2025 (AEST)*
+*Date: 4th June 2025 (AEST) - Updated with correct Claude Code MCP configuration*
 
 ## Overview
 
-This guide documents how to properly install and configure MCP (Model Context Protocol) servers for Claude Code. The official documentation is confusing as fuck, so this is a practical guide based on real-world testing.
+This guide documents how to properly install and configure MCP (Model Context Protocol) servers for Claude Code. Based on extensive testing with the actual Claude Code MCP system.
 
 ## Key Concepts
 
-### Global vs Project MCP Servers
+### MCP Server Scopes
 
-**Global MCP Servers:**
-- Installed once on your machine
-- Available to ALL projects
-- Live in system directories (npm global packages)
-- Think of them as "services" you can call from any project
+**User Scope (Recommended):**
+- Available across ALL your projects
+- Added with: `claude mcp add -s user`
+- Perfect for tools you want everywhere
 
-**Project Settings:**
-- Control which global servers a project can access
-- Just permission gates, NOT installations
+**Project Scope:**
+- Shared with team via `.mcp.json` file
+- Added with: `claude mcp add -s project`
+- Good for team-specific tools
+
+**Local Scope:**
+- Only available to you in current project
+- Added with: `claude mcp add` (default)
+- For project-specific tools
+
+**Project Permissions:**
+- Control which MCP servers each project can access
+- Configured in `.claude/settings.local.json`
 - Each project decides what MCP servers it wants to use
 
 ### The MCP Philosophy
@@ -30,33 +39,40 @@ MCP servers are **reusable services** that any project can access:
 
 ## Installation Process
 
-### 1. Install MCP Servers Globally
+### 1. Add MCP Servers via Claude Code CLI
 
-Install MCP servers system-wide using npm:
+**IMPORTANT:** Don't use `npm install -g`. Use Claude Code's MCP system instead.
 
 ```bash
 # Context7 - Documentation and library assistance
-npm install -g @upstash/context7-mcp
+claude mcp add context7 -s user -- npx @upstash/context7-mcp
 
 # GitHub integration
-npm install -g @modelcontextprotocol/server-github
+claude mcp add github -s user -- npx @modelcontextprotocol/server-github
+
+# Slack integration (with environment variables)
+claude mcp add slack -s user -e SLACK_BOT_TOKEN=xoxb-your-token -e SLACK_TEAM_ID=T123456 -e SLACK_CHANNEL_IDS=C123456,C789012 -- npx @modelcontextprotocol/server-slack
 
 # Supabase database operations
-npm install -g @supabase/mcp-server-supabase
+claude mcp add supabase -s user -e SUPABASE_ACCESS_TOKEN=your-token -- npx @supabase/mcp-server-supabase
 
 # Brave search capabilities
-npm install -g @modelcontextprotocol/server-brave-search
-
-# Sequential thinking enhancement
-npm install -g @modelcontextprotocol/server-sequential-thinking
+claude mcp add brave-search -s user -e BRAVE_API_KEY=your-key -- npx @modelcontextprotocol/server-brave-search
 ```
 
-### 2. Verify Global Installation
+### 2. Verify MCP Server Installation
 
-Check that MCP servers are installed globally:
+Check that MCP servers are configured:
 
 ```bash
-npm list -g | grep mcp
+claude mcp list
+```
+
+Should show your configured servers like:
+```
+context7: npx @upstash/context7-mcp
+slack: npx @modelcontextprotocol/server-slack
+github: npx @modelcontextprotocol/server-github
 ```
 
 ### 3. Configure Project Access
@@ -67,9 +83,9 @@ In each project, create/edit `.claude/settings.local.json`:
 {
   "permissions": {
     "allow": [
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs",
+      "mcp__context7__*",
       "mcp__github__*",
+      "mcp__slack__*",
       "mcp__supabase__*",
       "mcp__brave-search__*",
       "Bash(python:*)",
@@ -91,64 +107,65 @@ In each project, create/edit `.claude/settings.local.json`:
 "enableAllProjectMcpServers": true
 ```
 
-**CRITICAL:** This must be `true` to access global MCP servers. Without this, only project-specific servers work.
+**CRITICAL:** This must be `true` to access user-scope MCP servers. Without this, only local/project-specific servers work.
 
 ### MCP Permissions
 
 Each MCP server needs specific permissions in the `allow` array:
 
 ```json
-"mcp__context7__resolve-library-id",     // Context7 library resolution
-"mcp__context7__get-library-docs",       // Context7 documentation
-"mcp__github__*",                        // All GitHub operations
-"mcp__supabase__*",                      // All Supabase operations
-"mcp__brave-search__*"                   // All Brave search operations
+"mcp__context7__*",           // All Context7 operations
+"mcp__github__*",             // All GitHub operations
+"mcp__slack__*",              // All Slack operations
+"mcp__supabase__*",           // All Supabase operations
+"mcp__brave-search__*"        // All Brave search operations
 ```
+
+**Use `*` wildcard** for all operations, or specific function names for granular control.
 
 ## Working Example
 
-### s3multi Project (Working Configuration)
+### Complete Setup Example
 
-File: `/Users/oz/Sites/s3multi/.claude/settings.local.json`
+**Step 1: Add user-scope MCP servers**
+```bash
+claude mcp add context7 -s user -- npx @upstash/context7-mcp
+claude mcp add github -s user -- npx @modelcontextprotocol/server-github
+```
+
+**Step 2: Project configuration**
+File: `/Users/oz/Sites/your-project/.claude/settings.local.json`
 
 ```json
 {
   "permissions": {
     "allow": [
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs",
-      "Bash(supabase db push:*)",
+      "mcp__context7__*",
+      "mcp__github__*",
       "Bash(python:*)",
-      "mcp__supabase__list_migrations",
-      "mcp__supabase__execute_sql",
       "WebFetch(domain:localhost)"
     ],
     "deny": []
   },
-  "enableAllProjectMcpServers": true,
-  "enabledMcpjsonServers": [
-    "supabase"
-  ]
+  "enableAllProjectMcpServers": true
 }
 ```
 
 ## Testing MCP Installation
 
-### 1. Check MCP Status
+### 1. Check MCP Configuration
 
-From any project directory:
+List configured MCP servers:
 
 ```bash
-claude mcp
+claude mcp list
 ```
 
-Should show status of available MCP servers. Example output:
+Should show your configured servers:
 ```
-MCP Server Status
-
-• context7: connected
-• github: connected
-• supabase: connected
+context7: npx @upstash/context7-mcp
+github: npx @modelcontextprotocol/server-github
+slack: npx @modelcontextprotocol/server-slack
 ```
 
 ### 2. Debug Failed Connections
@@ -218,23 +235,25 @@ Then any project can access it by adding permissions:
 
 ### 2. Minimal Permissions
 
-Only grant permissions your project actually needs:
+Grant permissions your project needs:
 
 ```json
-// Good - specific permissions
-"mcp__context7__resolve-library-id"
-
-// Avoid - overly broad (unless needed)
+// Recommended - use wildcards for simplicity
 "mcp__context7__*"
+
+// Alternative - specific permissions for granular control
+"mcp__context7__resolve-library-id",
+"mcp__context7__get-library-docs"
 ```
 
 ### 3. Environment Variables
 
-For MCP servers requiring API keys, set them globally:
+For MCP servers requiring API keys, add them when configuring the server:
 
 ```bash
-export GITHUB_TOKEN="your-token"
-export SUPABASE_ACCESS_TOKEN="your-token"
+# Add environment variables directly to MCP server config
+claude mcp add github -s user -e GITHUB_TOKEN=your-token -- npx @modelcontextprotocol/server-github
+claude mcp add slack -s user -e SLACK_BOT_TOKEN=xoxb-token -e SLACK_TEAM_ID=T123456 -- npx @modelcontextprotocol/server-slack
 ```
 
 ### 4. Project Templates
@@ -245,8 +264,8 @@ Create a template `.claude/settings.local.json` for new projects:
 {
   "permissions": {
     "allow": [
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs",
+      "mcp__context7__*",
+      "mcp__github__*",
       "Bash(python:*)",
       "Bash(ls:*)",
       "Bash(grep:*)"
@@ -260,17 +279,21 @@ Create a template `.claude/settings.local.json` for new projects:
 ## Troubleshooting Commands
 
 ```bash
-# List installed global npm packages
-npm list -g --depth=0
+# List configured MCP servers
+claude mcp list
+
+# Get details about a specific server
+claude mcp get context7
+
+# Remove and re-add a problematic server
+claude mcp remove context7 -s user
+claude mcp add context7 -s user -- npx @upstash/context7-mcp
 
 # Check Claude Code version
 claude --version
 
-# Debug MCP connections
-claude --mcp-debug
-
-# Check MCP status
-claude mcp
+# Check MCP server status
+claude mcp list
 
 # View MCP logs
 ls -la ~/Library/Caches/claude-cli-nodejs/
@@ -293,15 +316,15 @@ ls -la ~/Library/Caches/claude-cli-nodejs/
 
 ## Conclusion
 
-MCP servers are powerful once you understand the global/project distinction:
+MCP servers are powerful once you understand the scope system:
 
-1. **Install globally** - One-time setup for each MCP server
-2. **Configure per-project** - Control access through permissions
-3. **Enable global access** - `"enableAllProjectMcpServers": true`
-4. **Grant specific permissions** - Only what each project needs
+1. **Add servers with correct scope** - Use `claude mcp add -s user` for global access
+2. **Configure per-project permissions** - Control access through `.claude/settings.local.json`
+3. **Enable user-scope access** - `"enableAllProjectMcpServers": true`
+4. **Use wildcard permissions** - `"mcp__servername__*"` for simplicity
 
-This approach lets you build a **reusable services ecosystem** where any automation project can access the tools it needs without reinstalling everything.
+This approach lets you build a **reusable services ecosystem** where any project can access the MCP tools it needs through simple permission configuration.
 
 ---
 
-*This guide was created after fighting through the confusing official MCP documentation. The key insight: MCP servers are global services, project settings are just access controls.*
+*This guide was updated after extensive testing with Claude Code's actual MCP system. The key insight: Use `claude mcp add -s user` for global servers, control access per-project with permissions.*
